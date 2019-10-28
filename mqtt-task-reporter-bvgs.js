@@ -4,9 +4,15 @@ function sendInnSvaret(svar, gruppe) {
   var MQTT_TOPIC = "bvgs"
 
   var client = new Paho.Client(MQTT_HOST, MQTT_PORT, gruppe);
+  var resultatEl = document.querySelector("#resultat")
 
-  document.querySelector("#resultat").innerHTML = result
-  console.log(result)
+  if (resultatEl) {
+    resultatEl.innerHTML = svar
+  } else {
+    console.error("Kunne ikke finne element med id='resultat'")
+  }
+
+  console.log(svar, gruppe)
 
   client.connect({
     useSSL: true,
