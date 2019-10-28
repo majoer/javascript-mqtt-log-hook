@@ -1,14 +1,16 @@
 # Javascript MQTT console-log hook
 
-WARNING: REPLACES console.log, this is just for fun.
+Deklarerer en funksjon "sendInnSvaret(svar, gruppe)";
 
-Add this url to e.g. jsfiddle: https://cdn.jsdelivr.net/gh/majoer/javascript-mqtt-task-reporter-bvgs@master/mqtt-task-reporter-bvgs.js
+- `svar` skrives til et HTML element med `id="resultat"`
+- `svar` sendes til MQTT server med `gruppe` som klient-id og "bvgs" som topic
 
-Example: https://jsfiddle.net/matsjoer/mcs8xw0d
+Legg til URL i e.g. jsfiddle: https://cdn.jsdelivr.net/gh/majoer/javascript-mqtt-task-reporter-bvgs@master/mqtt-task-reporter-bvgs.js
 
-Messages can be seen in broker here: http://www.hivemq.com/demos/websocket-client/
+Eksempel: https://jsfiddle.net/matsjoer/mcs8xw0d
 
-1. set host: test.mosquitto.org
-2. set port: 8081
-3. subscribe to topic: bvgs
-4. console.log from browser should appear in "Messages"
+Meldinger skrives til broker. Kan leses her: http://www.hivemq.com/demos/websocket-client/
+
+1. sett host: test.mosquitto.org
+2. sett port: 8081
+3. subscribe til topic: bvgs
