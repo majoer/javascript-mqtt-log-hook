@@ -14,3 +14,8 @@ Meldinger skrives til broker. Kan leses her: http://www.hivemq.com/demos/websock
 1. sett host: test.mosquitto.org
 2. sett port: 8081
 3. subscribe til topic: bvgs
+
+
+Merk:
+jsdelivr.net cacher js fila. 
+Slett cachen her: https://purge.jsdelivr.net/gh/majoer/javascript-mqtt-task-reporter-bvgs@master/mqtt-task-reporter-bvgs.js
