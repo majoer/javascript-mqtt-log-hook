@@ -18,4 +18,5 @@ Meldinger skrives til broker. Kan leses her: http://www.hivemq.com/demos/websock
 
 Merk:
 jsdelivr.net cacher js fila. 
+
 Slett cachen her: https://purge.jsdelivr.net/gh/majoer/javascript-mqtt-task-reporter-bvgs@master/mqtt-task-reporter-bvgs.js
