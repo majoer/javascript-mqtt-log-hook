@@ -12,7 +12,7 @@ Eksempel: https://jsfiddle.net/matsjoer/mcs8xw0d
 Meldinger skrives til broker. Kan leses her: http://www.hivemq.com/demos/websocket-client/
 
 1. sett host: test.mosquitto.org
-2. sett port: 8081
+2. sett port: 8080
 3. subscribe til topic: bvgs
 
 
