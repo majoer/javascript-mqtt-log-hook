@@ -11,6 +11,8 @@ Legg til ekstern javascript i jsfiddle:
 Eksempler:
 - https://jsfiddle.net/matsjoer/mcs8xw0d
 
+Dokumentasjon, paho mqtt: http://www.eclipse.org/paho/files/jsdoc/index.html
+
 Meldinger skrives til broker. Kan leses her: http://www.hivemq.com/demos/websocket-client/
 
 1. sett host: test.mosquitto.org
