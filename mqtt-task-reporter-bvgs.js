@@ -5,6 +5,7 @@ function sendInnSvaret(svar, gruppe) {
 
   var client = new Paho.Client(MQTT_HOST, MQTT_PORT, gruppe);
   var resultatEl = document.querySelector("#resultat")
+  var oppgaveEl = document.querySelector("h1")
 
   if (resultatEl) {
     resultatEl.innerHTML = svar
@@ -19,7 +20,8 @@ function sendInnSvaret(svar, gruppe) {
     onSuccess: function() {
 
       console.log("Koblet til broker")
-      const message = new Paho.Message('' + svar)
+      const oppgavenavn = oppgaveEl ? oppgaveEl.innerHTML : 'Ukjent Oppgave'
+      const message = new Paho.Message(oppgavenavn + ':' + svar)
 
       message.destinationName = MQTT_TOPIC
 
