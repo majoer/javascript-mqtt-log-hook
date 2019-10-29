@@ -24,7 +24,7 @@ function sendInnSvaret(svar, gruppe) {
 
       console.log("Koblet til broker")
       
-      var message = new Paho.Message(gruppenavn + ":" oppgavenavn + ":" + svar)
+      var message = new Paho.Message(gruppenavn + ":" + oppgavenavn + ":" + svar)
 
       message.destinationName = MQTT_TOPIC
 
