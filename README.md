@@ -1,4 +1,4 @@
-# Javascript MQTT Task Reporter
+# Javascript MQTT Task Reporter 
 Deklarerer en funksjon `sendInnSvaret(svar, gruppe)`
 
 - `svar` skrives til et HTML element med `id="resultat"`
