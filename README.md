@@ -1,5 +1,5 @@
 # Javascript MQTT Task Reporter 
-Deklarerer en funksjon `sendInnSvaret(svar, gruppe)`
+Deklarerer en funksjon `sendInnSvar(svar, gruppe)`
 
 - `svar` skrives til et HTML element med `id="resultat"`
 - `svar` sendes til MQTT server med `gruppe` som klient-id og "bvgs" som topic
