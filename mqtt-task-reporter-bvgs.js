@@ -1,14 +1,16 @@
 function sendInnSvar(svar, gruppe) {
-  var MQTT_HOST = "test.mosquitto.org"
-  var MQTT_PORT = 8081
-  var MQTT_TOPIC = "bvgs"
+  let MQTT_HOST = "mqtt.flespi.io"
+  let MQTT_PORT = 443
+  let MQTT_TOPIC = "bvgs"
+  let MQTT_USER = "FlespiToken Pn9sJUTeQrco4aiUpNKZBU3sn7obeQqR1o7B6QFK7GY0G4KTHlH73ynhwzgydue5"
+  let MQTT_PASS = ""
 
-  var resultatEl = document.querySelector("#resultat")
-  var oppgaveEl = document.querySelector("h1")
-  var gruppenavn = gruppe ? ('' + gruppe).trim() : 'Ukjent Gruppe'
-  var oppgavenavn = oppgaveEl ? oppgaveEl.innerHTML.trim() : 'Ukjent Oppgave'
+  let resultatEl = document.querySelector("#resultat")
+  let oppgaveEl = document.querySelector("h1")
+  let gruppenavn = gruppe ? ('' + gruppe).trim() : 'Ukjent Gruppe'
+  let oppgavenavn = oppgaveEl ? oppgaveEl.innerHTML.trim() : 'Ukjent Oppgave'
 
-  var client = new Paho.Client(MQTT_HOST, MQTT_PORT, gruppenavn);
+  let client = new Paho.Client(MQTT_HOST, MQTT_PORT, gruppenavn);
 
   if (resultatEl) {
     resultatEl.innerHTML = svar
@@ -19,10 +21,12 @@ function sendInnSvar(svar, gruppe) {
   console.log(svar, gruppe)
   client.connect({
     useSSL: true,
+    userName : MQTT_USER,
+    password : MQTT_PASS,
 
     onSuccess: function() {
       console.log("Koblet til broker")
-      var message = new Paho.Message(JSON.stringify({ gruppenavn, oppgavenavn, svar }))
+      let message = new Paho.Message(JSON.stringify({ gruppenavn, oppgavenavn, svar }))
       message.destinationName = MQTT_TOPIC
       client.send(message)
     }
