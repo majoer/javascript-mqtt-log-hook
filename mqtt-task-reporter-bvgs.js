@@ -29,7 +29,10 @@ function sendInnSvar(svar, gruppe) {
       let message = new Paho.Message(JSON.stringify({ gruppenavn, oppgavenavn, svar }))
       message.destinationName = MQTT_TOPIC
       client.send(message)
-    }
+    },
+        onFailure: function (err) {
+          console.log(err);
+        }
   })
 }
 
