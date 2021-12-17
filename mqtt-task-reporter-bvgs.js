@@ -1,4 +1,5 @@
 function sendInnSvar(svar, gruppe) {
+  console.log("it is alive")
   let MQTT_HOST = "mqtt.flespi.io"
   let MQTT_PORT = 443
   let MQTT_TOPIC = "bvgs"
