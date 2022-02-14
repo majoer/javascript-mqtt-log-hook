@@ -3,7 +3,7 @@ function sendInnSvar(svar, gruppe) {
   let MQTT_HOST = "mqtt.flespi.io"
   let MQTT_PORT = 443
   let MQTT_TOPIC = "bvgs"
-  let MQTT_USER = "FlespiToken 3BTf1O56jinTe3NkgAUgiXTs7aO1lDhe20iTEdNOjYvnR8vYxe4F1LYWLAMU1TXT"
+  let MQTT_USER = "FlespiToken 5iV90Mn4XZCl370NKnTg7qJGl4MOuFAnLjmBWzuHnUQgPHTnSBtNR0j0UVCfo0sZ"
   let MQTT_PASS = ""
 
   let resultatEl = document.querySelector("#resultat")
